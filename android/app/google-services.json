@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "125737600832",
+    "project_id": "ciee-abb2c",
+    "storage_bucket": "ciee-abb2c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125737600832:android:a49ec5afc74719cf155ca5",
+        "android_client_info": {
+          "package_name": "com.k.cie"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw3NgO3foDSRsNUJkHqM31WR_4mOUXn2o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
