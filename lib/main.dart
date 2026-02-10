@@ -210,31 +210,35 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _screens[_selectedIndex],
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.05),
-              blurRadius: 10,
-              offset: const Offset(0, -2),
-            ),
-          ],
-        ),
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                _buildNavItem(0, Icons.home_outlined, 'Home'),
-                _buildNavItem(1, Icons.explore_outlined, 'Explore'),
-                _buildNavItem(2, Icons.shopping_cart_outlined, 'Cart'),
-                _buildNavItem(3, Icons.favorite_border, 'Favourite'),
-                _buildNavItem(4, Icons.person_outline, 'Account'),
-              ],
+    return DefaultTabController(
+      length: 5,
+      initialIndex: _selectedIndex,
+      child: Scaffold(
+        body: _screens[_selectedIndex],
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.05),
+                blurRadius: 10,
+                offset: const Offset(0, -2),
+              ),
+            ],
+          ),
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildNavItem(0, Icons.home_outlined, 'Home'),
+                  _buildNavItem(1, Icons.explore_outlined, 'Explore'),
+                  _buildNavItem(2, Icons.shopping_cart_outlined, 'Cart'),
+                  _buildNavItem(3, Icons.favorite_border, 'Favourite'),
+                  _buildNavItem(4, Icons.person_outline, 'Account'),
+                ],
+              ),
             ),
           ),
         ),
